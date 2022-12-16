@@ -29,3 +29,5 @@ Start the server
   npm run dev
 ```
 
+## Contact 
+You can reach me at agustingomezdev@gmail.com
