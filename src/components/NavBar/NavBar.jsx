@@ -1,5 +1,6 @@
 import { CartWidget } from "../CartWidget/CartWidget"
 import { BsSearch } from "react-icons/bs"
+import { RxHamburgerMenu } from "react-icons/rx"
 import { Link, NavLink } from "react-router-dom"
 import "./NavBar.css"
 
@@ -12,16 +13,8 @@ export const NavBar = () => {
                 </Link>
             </div>
             <div className="flex items-center gap-10">
-                {/* <div className="flex items-center">
-                    <select name="category" className="h-10 p-2 rounded-l-lg">
-                        <option selected disabled>Category</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                    </select>
-                    <input type="search" placeholder="" className="h-10 focus:outline-none p-2"/>
-                    <BsSearch className="bg-white h-10 w-10 p-2 rounded-r-lg cursor-pointer text-white bg-primaryColor"/>
-                </div> */}
-                <ul className="flex gap-8 text-xl uppercase text-white flex-col lg:flex-row">
+                <RxHamburgerMenu className="block md:hidden text-white cursor-pointer text-4xl font-extrabold hover:text-primaryColor ease-in-out duration-200 "/>
+                <ul className="md:flex gap-8 text-xl uppercase text-white flex-col md:flex-row">
                     <li> <NavLink to="/" className="text-current font-bold hover:text-primaryColor ease-in-out duration-200">Home</NavLink> </li>
                     <li className="relative products-list-hover"> <p className="cursor-pointer text-current font-bold hover:text-primaryColor ease-in-out duration-200">Categories</p>    
                         <ul className="absolute bg-darkBgColor rounded-r-2xl rounded-l-2xl items-center p-5 products-list gap-10 text-xl uppercase text-white flex-col lg:flex-row">
