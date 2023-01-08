@@ -6,13 +6,13 @@ import "./NavBar.css"
 
 export const NavBar = () => {
     return (
-        <div className="w-full flex justify-between items-center bg-darkBgColor p-4">
+        <div className="w-full flex justify-between items-center bg-darkBgColor p-4 fixed top-0 shadow-xl">
             <div>
                 <Link to="/">
                     <img className="w-14 hover:brightness-75 ease-in-out duration-200" src="./src/assets/zephys_color_min.png" alt="Zephys logo" />
                 </Link>
             </div>
-            <div className="flex items-center gap-10">
+            <div className="flex-col md:flex-row flex items-center gap-10">
                 <SearchBox />
                 <RxHamburgerMenu className="block md:hidden text-white cursor-pointer text-4xl font-extrabold hover:text-primaryColor ease-in-out duration-200 "/>
                 <ul className="md:flex gap-8 text-xl uppercase text-white flex-col md:flex-row">
