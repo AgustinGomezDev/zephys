@@ -6,21 +6,23 @@ import { useParams } from "react-router-dom"
 export const ItemListContainer = () =>{
 
     const [products, setProducts] = useState([])
-    const { categoryId } = useParams()
+    const { categoryId, search } = useParams()
 
     useEffect(() => {
         requestData()
             .then((res) => {
-                if(!categoryId){
-                    setProducts(res)
-                }else{
+                if(search){
+                    setProducts(res.filter(prod => prod.name.toLowerCase().includes(search.toLowerCase())))
+                }else if(categoryId){
                     setProducts(res.filter(prod => prod.category === categoryId))
+                }else{
+                    setProducts(res)
                 }
             })
             .catch((err) => {
                 console.log(err)
             })
-    }, [categoryId])
+    }, [categoryId, search])
 
     return(
         <div className="container mx-auto">

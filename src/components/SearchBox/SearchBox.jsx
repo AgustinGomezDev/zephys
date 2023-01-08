@@ -12,7 +12,7 @@ export const SearchBox = () => {
     }
 
     const handleSearch = () => { // when search button is clicked
-        navigate(`/search/${searchValue}`)
+        navigate(`products/search/${searchValue}`)
     }
 
     return(

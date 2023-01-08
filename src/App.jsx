@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ItemListContainer />}/>
         <Route path="/detail/:itemId" element={<ItemDetailContainer />}/>
-        {/* <Route path="/search/:itemName" element={<ItemListContainer />}/> NO FUNCIONA */}
+        <Route path="/products/search/:search" element={<ItemListContainer />}/>
         <Route path="/products/:categoryId" element={<ItemListContainer />}/>
         <Route path="*" element={<Navigate to={"/"} />}/> 
         {/* USAR NAVIGATE O CREAR COMPONENTE CON ERROR 404 */}
