@@ -3,6 +3,7 @@ import { NavBar } from './components/NavBar/NavBar'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
+import { Contact } from './components/Contact/Contact'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/detail/:itemId" element={<ItemDetailContainer />}/>
         <Route path="/products/search/:search" element={<ItemListContainer />}/>
         <Route path="/products/:categoryId" element={<ItemListContainer />}/>
+        <Route path="/contact" element={<Contact />}/>
         <Route path="*" element={<Navigate to={"/"} />}/> 
         {/* USAR NAVIGATE O CREAR COMPONENTE CON ERROR 404 */}
       </Routes>
