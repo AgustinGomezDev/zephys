@@ -4,7 +4,7 @@ export const Contact = () => {
     return (
         <div className="relative">
             <img
-                className="w-full h-96 object-cover object-center mt-20"
+                className="w-full h-96 object-cover object-center mt-20 z-0"
                 src="https://images.pexels.com/photos/1009922/pexels-photo-1009922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Dog banner image"
             />
