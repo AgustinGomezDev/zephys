@@ -4,6 +4,7 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
 import { Contact } from './components/Contact/Contact'
+import { AboutUs } from './components/AboutUs/AboutUs'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/products/search/:search" element={<ItemListContainer />}/>
         <Route path="/products/:categoryId" element={<ItemListContainer />}/>
         <Route path="/contact" element={<Contact />}/>
+        <Route path="/about-us" element={<AboutUs />}/>
         <Route path="*" element={<Navigate to={"/"} />}/> 
         {/* USAR NAVIGATE O CREAR COMPONENTE CON ERROR 404 */}
       </Routes>
