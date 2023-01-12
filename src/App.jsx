@@ -18,7 +18,6 @@ function App() {
         <Route path="/contact" element={<Contact />}/>
         <Route path="/about-us" element={<AboutUs />}/>
         <Route path="*" element={<Navigate to={"/"} />}/> 
-        {/* USAR NAVIGATE O CREAR COMPONENTE CON ERROR 404 */}
       </Routes>
     </BrowserRouter>
   )
