@@ -11,18 +11,18 @@ export const SearchBox = () => {
         setSearchValue(e.target.value)
     }
 
-    const handleSearch = () => { // when search button is clicked
+    const handleSearch = (e) => { // when search form is submited
+        e.preventDefault()
         navigate(`products/search/${searchValue}`)
     }
 
     return(
         <div>
-            <form className="flex items-center">
+            <form className="flex items-center" onSubmit={handleSearch}>
                 <input
                     id="searchBox"
                     type="text"
                     onChange={handleOnChange}
-                    // onSubmit={handleSearch} NO FUNCIONA
                     placeholder="Search a product..."
                     className="h-10 focus:outline-none p-2 rounded-l-lg"
                 />
