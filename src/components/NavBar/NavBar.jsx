@@ -29,7 +29,8 @@ export const NavBar = () => {
                     <li> <NavLink to="/contact" className="text-current font-bold hover:text-primaryColor ease-in-out duration-200">Contact</NavLink> </li>
                 </ul>
             </div>
-            <CartWidget />
+            <Link to="/cart"><CartWidget /></Link>
+            
         </div>
         
     )
