@@ -42,7 +42,12 @@ export const ItemDetail = ( {id, name, description, image, price, stock, categor
                                 onAdd={handleAdd}
                             />
                             
-                        : <Link to="/cart" className="rounded-lg text-center px-5 py-2.5 border-2 border-transparent block w-60 text-white bg-primaryColor hover:border-violet-200 active:bg-violet-800 focus:outline-none">Finish my purchase</Link>
+                        : <div className="flex items-center gap-5">
+                            <Link to="/cart" className="rounded-lg text-center px-5 py-2.5 border-2 border-transparent block w-60 text-white bg-primaryColor hover:border-violet-200 active:bg-violet-800 focus:outline-none">Finish my purchase</Link>
+                            <button onClick={handleBack} className="rounded-lg text-center px-5 py-2.5 border-2 border-transparent block w-60 text-white bg-green-600 hover:border-green-200 active:bg-green-800 focus:outline-none">Keep buying</button>
+                          </div>
+                        
+                        
                 } 
                
                 <hr />
