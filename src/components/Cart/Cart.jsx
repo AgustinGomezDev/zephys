@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext"
 import { useNavigate } from "react-router-dom"
 
 export const Cart = () => {
-    const { cart, emptyCart, totalPrice } = useContext(CartContext)
+    const { cart, emptyCart, totalPrice, removeFromCart } = useContext(CartContext)
 
     const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ export const Cart = () => {
                             </p>
                         </div>
                         <div className="flex items-center gap-5">
-                            <button className="block font-bold text-white bg-red-500 hover:border-red-200 active:bg-red-800 focus:outline-none">Remove from cart</button>
+                            <button onClick={() => removeFromCart(item.id)} className="block font-bold text-white bg-red-500 hover:border-red-200 active:bg-red-800 focus:outline-none">Remove from cart</button>
                             <button className="block font-bold text-white bg-green-600 hover:border-green-200 active:bg-green-800 focus:outline-none">+</button>
                         </div>
                     </div>

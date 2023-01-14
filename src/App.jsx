@@ -12,10 +12,10 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (item) => {
-    // setCart([...cart, item])
-    const newCart = cart.slice()
-    newCart.push(item)
-    setCart(newCart)
+    setCart([...cart, item])
+    // const newCart = cart.slice()
+    // newCart.push(item)
+    // setCart(newCart)
   }
 
   const emptyCart = () => {
@@ -30,8 +30,12 @@ function App() {
     return cart.reduce((acc, item) => acc + item.price * item.amount, 0)
   }
 
+  const removeFromCart = (id) => {
+    setCart( cart.filter(item => item.id !== id) )
+  }
+
   return (
-    <CartContext.Provider value={{cart, addToCart, isInCart, emptyCart, totalPrice}}> 
+    <CartContext.Provider value={{ cart, addToCart, isInCart, emptyCart, totalPrice, removeFromCart }}> 
       <BrowserRouter>
         <NavBar />
         <Routes>
