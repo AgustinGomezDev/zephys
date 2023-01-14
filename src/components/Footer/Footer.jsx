@@ -3,7 +3,7 @@ import { AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 export const Footer = () => {
     return (
         <div className="w-full bg-darkBgColor mt-6">
-            <div className="flex items-center text-white justify-evenly py-3 text-lg font-semibold">
+            <div className="flex flex-col md:flex-row items-center text-white justify-evenly py-3 text-lg font-semibold">
                 <p>Contact us if you have any questions.</p>
                 <div className="flex gap-5 items-center">
                     <div className="flex items-center gap-3">

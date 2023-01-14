@@ -1,6 +1,5 @@
 import { CartWidget } from "../CartWidget/CartWidget"
 import { SearchBox } from "../SearchBox/SearchBox"
-import { RxHamburgerMenu } from "react-icons/rx"
 import { Link, NavLink } from "react-router-dom"
 import "./NavBar.css"
 
@@ -14,8 +13,8 @@ export const NavBar = () => {
             </div>
             <div className="flex-col md:flex-row flex items-center gap-10">
                 <SearchBox />
-                <RxHamburgerMenu className="block md:hidden text-white cursor-pointer text-4xl font-extrabold hover:text-primaryColor ease-in-out duration-200 "/>
-                <ul className="md:flex gap-8 text-xl uppercase text-white flex-col md:flex-row">
+
+                <ul className="grid grid-cols-2 md:flex gap-8 text-xl uppercase text-white flex-col md:flex-row">
                     <li> <NavLink to="/" className="text-current font-bold hover:text-primaryColor ease-in-out duration-200">Home</NavLink> </li>
                     <li className="relative products-list-hover"> <p className="cursor-pointer text-current font-bold hover:text-primaryColor ease-in-out duration-200">Categories</p>    
                         <ul className="absolute bg-darkBgColor rounded-r-2xl rounded-l-2xl items-center p-5 products-list gap-10 text-xl uppercase text-white flex-col lg:flex-row">

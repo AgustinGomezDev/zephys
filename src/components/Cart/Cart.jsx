@@ -12,7 +12,7 @@ export const Cart = () => {
     }
 
     return(
-        <div className="container mx-auto">
+        <div className="container mx-auto min-h-screen">
             <h2 className="inline-block text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-tr from-pink-300 to-purple-900 leading-tight">Your purchase</h2>
             <hr />
             {

@@ -17,7 +17,7 @@ export const SearchBox = () => {
     }
 
     return(
-        <div>
+        <div className="hidden lg:block">
             <form className="flex items-center" onSubmit={handleSearch}>
                 <input
                     id="searchBox"

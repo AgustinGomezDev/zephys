@@ -22,7 +22,7 @@ export const ItemDetail = ( {id, name, description, image, price, stock, categor
     }
 
     return (
-        <div className="grid grid-cols-2 mt-14 justify-items-center gap-8">
+        <div className="grid lg:grid-cols-2 mt-14 justify-items-center gap-8 min-h-screen">
             <div>
                 <img className="detail-image" src={image} alt="product image" />
             </div>
