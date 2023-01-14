@@ -1,41 +1,16 @@
-import { useState } from 'react'
 import { NavBar } from './components/NavBar/NavBar'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
 import { Contact } from './components/Contact/Contact'
 import { AboutUs } from './components/AboutUs/AboutUs'
-import { CartContext } from './context/CartContext'
 import { Cart } from './components/Cart/Cart'
+import { CartProvider } from './context/CartContext'
 
 function App() {
-  const [cart, setCart] = useState([]);
-
-  const addToCart = (item) => {
-    setCart([...cart, item])
-    // const newCart = cart.slice()
-    // newCart.push(item)
-    // setCart(newCart)
-  }
-
-  const emptyCart = () => {
-    setCart([])
-  }
-
-  const isInCart = (id) => {
-    return cart.some(item => item.id === id)
-  }
-
-  const totalPrice = () => {
-    return cart.reduce((acc, item) => acc + item.price * item.amount, 0)
-  }
-
-  const removeFromCart = (id) => {
-    setCart( cart.filter(item => item.id !== id) )
-  }
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, isInCart, emptyCart, totalPrice, removeFromCart }}> 
+    <CartProvider>
       <BrowserRouter>
         <NavBar />
         <Routes>
@@ -49,7 +24,7 @@ function App() {
           <Route path="*" element={<Navigate to={"/"} />}/> 
         </Routes>
       </BrowserRouter>
-    </CartContext.Provider>
+    </CartProvider>
   )
 }
 
