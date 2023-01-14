@@ -21,12 +21,11 @@ export const Cart = () => {
                         <div>
                             <h4 className="text-lg font-bold">{item.name}</h4>
                             <p className="text-lg font-medium">Amount: {item.amount}</p>
-                            <p className="text-lg font-medium">Price: ${(item.price * item.amount).toFixed(2)}
-                            </p>
+                            <p className="text-lg font-medium">Unit price: ${item.price}</p>
+                            <p className="text-lg font-medium">Total price: ${(item.price * item.amount).toFixed(2)}</p>
                         </div>
                         <div className="flex items-center gap-5">
                             <button onClick={() => removeFromCart(item.id)} className="block font-bold text-white bg-red-500 hover:border-red-200 active:bg-red-800 focus:outline-none">Remove from cart</button>
-                            <button className="block font-bold text-white bg-green-600 hover:border-green-200 active:bg-green-800 focus:outline-none">+</button>
                         </div>
                     </div>
                 ))
