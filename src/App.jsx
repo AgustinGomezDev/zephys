@@ -5,21 +5,37 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
 import { Contact } from './components/Contact/Contact'
 import { AboutUs } from './components/AboutUs/AboutUs'
+import { CartContext } from './context/CartContext'
 
 function App() {
+  const [cart, setCart] = useState([]);
+  
+  const addToCart = (item) => {
+    // setCart([...cart, item])
+    const newCart = cart.slice()
+    newCart.push(item)
+    setCart(newCart)
+  }
+
+  const isInCart = (id) => {
+    return cart.some(item => item.id === id)
+  }
+
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<ItemListContainer />}/>
-        <Route path="/detail/:itemId" element={<ItemDetailContainer />}/>
-        <Route path="/products/search/:search" element={<ItemListContainer />}/>
-        <Route path="/products/:categoryId" element={<ItemListContainer />}/>
-        <Route path="/contact" element={<Contact />}/>
-        <Route path="/about-us" element={<AboutUs />}/>
-        <Route path="*" element={<Navigate to={"/"} />}/> 
-      </Routes>
-    </BrowserRouter>
+    <CartContext.Provider value={{cart, addToCart, isInCart}}> 
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />}/>
+          <Route path="/detail/:itemId" element={<ItemDetailContainer />}/>
+          <Route path="/products/search/:search" element={<ItemListContainer />}/>
+          <Route path="/products/:categoryId" element={<ItemListContainer />}/>
+          <Route path="/contact" element={<Contact />}/>
+          <Route path="/about-us" element={<AboutUs />}/>
+          <Route path="*" element={<Navigate to={"/"} />}/> 
+        </Routes>
+      </BrowserRouter>
+    </CartContext.Provider>
   )
 }
 
