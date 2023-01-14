@@ -6,6 +6,7 @@ import { Contact } from './components/Contact/Contact'
 import { AboutUs } from './components/AboutUs/AboutUs'
 import { Cart } from './components/Cart/Cart'
 import { CartProvider } from './context/CartContext'
+import { Footer } from './components/Footer/Footer'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/cart" element={<Cart />}/>
           <Route path="*" element={<Navigate to={"/"} />}/> 
         </Routes>
+        <Footer />
       </BrowserRouter>
     </CartProvider>
   )
