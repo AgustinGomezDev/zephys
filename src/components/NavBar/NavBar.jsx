@@ -8,7 +8,7 @@ export const NavBar = () => {
         <div className="z-10 w-full flex justify-between items-center bg-darkBgColor p-4 fixed top-0 shadow-xl">
             <div>
                 <Link to="/">
-                    <img className="w-14 hover:brightness-75 ease-in-out duration-200" src="./src/assets/zephys_color_min.png" alt="Zephys logo" />
+                    <img className="w-14 hover:brightness-75 ease-in-out duration-200" src="../public/apple-touch-icon-180x180.png" alt="Zephys logo" />
                 </Link>
             </div>
             <div className="flex-col md:flex-row flex items-center gap-10">
