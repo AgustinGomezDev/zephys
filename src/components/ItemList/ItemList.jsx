@@ -13,7 +13,7 @@ export const ItemList = ({products}) => {
             { products.length === 0
                 ?
                 <div className="flex justify-center items-center flex-col gap-10">
-                    <h2 className="text-center text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-900 leading-tight">¡We couldn't find any products with that name!</h2>
+                    <h2 className="text-center text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-purple-900 leading-tight">¡We couldn't find any products!</h2>
                     <img
                         className="w-full object-cover rounded-md"
                         style={{height: "40rem"}}
