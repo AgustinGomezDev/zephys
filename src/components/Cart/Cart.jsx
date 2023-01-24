@@ -52,7 +52,7 @@ export const Cart = () => {
                     </div>
                     <div className="flex items-center gap-8">
                         <button onClick={emptyCart} className="block w-40 font-bold text-white bg-red-500 hover:border-red-200 active:bg-red-800 focus:outline-none">Empty cart</button>
-                        <button className="block w-40 font-bold text-white bg-green-600 hover:border-green-200 active:bg-green-800 focus:outline-none">Buy cart</button>
+                        <Link to="/checkout" className="rounded-lg text-center px-5 py-2.5 border-2 border-transparent block w-40 font-bold text-white bg-green-600 hover:border-green-200 active:bg-green-800 focus:outline-none">Buy cart</Link>
                     </div>
                 </div>
             </div>

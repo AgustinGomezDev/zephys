@@ -7,6 +7,7 @@ import { AboutUs } from './components/AboutUs/AboutUs'
 import { Cart } from './components/Cart/Cart'
 import { CartProvider } from './context/CartContext'
 import { Footer } from './components/Footer/Footer'
+import { Checkout } from './components/Checkout/Checkout'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact />}/>
           <Route path="/about-us" element={<AboutUs />}/>
           <Route path="/cart" element={<Cart />}/>
+          <Route path="/checkout" element={<Checkout />}/>
           <Route path="*" element={<Navigate to={"/"} />}/> 
         </Routes>
         <Footer />
