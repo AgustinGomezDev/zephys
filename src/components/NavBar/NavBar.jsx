@@ -16,7 +16,7 @@ export const NavBar = () => {
                 </Link>
             </div>
             <div className="flex-col md:flex-row flex items-center gap-10">
-                <SearchBox />
+                {/* <SearchBox /> */}
 
                 <ul className="grid grid-cols-2 md:flex gap-8 text-xl uppercase text-white flex-col md:flex-row">
                     <li> <NavLink to="/" className="text-current font-bold hover:text-primaryColor ease-in-out duration-200">Home</NavLink> </li>
