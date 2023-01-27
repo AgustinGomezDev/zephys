@@ -5,6 +5,21 @@ import { db } from "../../firebase/config";
 import { collection, addDoc, updateDoc, getDoc, getDocs, doc, writeBatch, query, where, documentId } from "firebase/firestore";
 import { Formik } from "formik"
 import * as Yup from "yup"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const notify = () => {
+    toast.error('There is no stock available for some of the selected products, sorry!', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: false,
+        progress: undefined,
+        theme: "colored",
+        });
+}
 
 const schema = Yup.object().shape({
     firstName: Yup.string().min(3, 'Minimum 3 characters').max(25, 'Maximum 25 characters').required('This input field is required'),
@@ -61,7 +76,7 @@ export const Checkout = () => {
                         .catch((err) => console.log(err))
                 })
         }else{
-            alert("There is no stock available for any product, sorry!")
+            {notify()}
         }
     }
 
@@ -93,7 +108,6 @@ export const Checkout = () => {
                     email: ''
                 }}
                 onSubmit={(values) => {
-                    console.log(values)
                     createOrder(values)
                 }}
                 validationSchema={schema}
@@ -167,6 +181,18 @@ export const Checkout = () => {
                         <button type="button" className="block w-40 text-white bg-darkBgColor hover:border-primaryColor" onClick={handleBack}>Back</button>
                         <button type="submit" className="mt-5 block w-40 font-bold text-white bg-green-600 hover:border-green-200 active:bg-green-800 focus:outline-none">Send</button>
                     </div>
+                    <ToastContainer
+                        position="top-center"
+                        autoClose={5000}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable={false}
+                        pauseOnHover
+                        theme="colored"
+                    />
                 </form>
                 )}
             </Formik>
