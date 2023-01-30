@@ -30,6 +30,7 @@ export const NavBar = () => {
                     </li>
                     <li> <NavLink to="/about-us" className="text-current font-bold hover:text-primaryColor ease-in-out duration-200">About us</NavLink> </li>
                     <li> <NavLink to="/contact" className="text-current font-bold hover:text-primaryColor ease-in-out duration-200">Contact</NavLink> </li>
+                    <li> <NavLink to="/seemyorders" className="text-current font-bold hover:text-primaryColor ease-in-out duration-200">See my orders</NavLink> </li>
                 </ul>
             </div>
             <Link to="/cart" className={`ease-in-out duration-200 ${cart.length === 0 ? 'opacity-0 invisible' : 'opacity-100 visible'}`}><CartWidget /></Link>
