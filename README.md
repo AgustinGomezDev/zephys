@@ -1,7 +1,7 @@
 ![Logo](public/zephys_color.png)
 
 # Zephys
-Zephys is a fictitious company created to build the project for the reactjs course of [Coderhouse](https://www.coderhouse.com).
+Zephys is a fictitious company created to build the project for the reactjs course of <a href="https://www.coderhouse.com" target="_blank">Coderhouse</a>.
 
   - [Demo](#demo)
   - [Installation](#installation)
@@ -10,7 +10,7 @@ Zephys is a fictitious company created to build the project for the reactjs cour
   - [Contact](#contact)
 
 ## <a name="demo"></a>Demo
-<a target="__blank" href="https://zephys.vercel.app/">Take a look at the project</a>
+<a target="_blank" href="https://zephys.vercel.app/">Take a look at the project</a>
 
 ## <a name="installation"></a>Installation
 This project requires NodeJS to work.
@@ -28,18 +28,17 @@ First of all you have to clone the project then enter to the project directory a
   - Products divided into categories
   - Form validation
   - Products and orders stored in a database
+  - See my orders entering the email
 
 ## <a name="dependencies"></a>Dependencies
-- Project dependencies
-  - <a target="__blank" href="https://react-icons.github.io/react-icons">React Icons</a>
-  - <a target="__blank" href="https://reactrouter.com/en/main">React Router Dom</a>
-  - <a target="__blank" href="https://fkhadra.github.io/react-toastify/introduction">React Toastify</a>
-  - <a target="__blank" href="https://firebase.google.com">Firebase</a>
-  - <a target="__blank" href="https://formik.org/">Formik</a>
-  - <a target="__blank" href="https://github.com/jquense/yup">Yup</a>
-- Dev dependencies
-  - <a target="__blank" href="https://vitejs.dev/">Vite</a>
-  - <a target="__blank" href="https://tailwindcss.com/">Tailwindcss</a>
+  - <a target="_blank" href="https://react-icons.github.io/react-icons">React Icons</a>
+  - <a target="_blank" href="https://reactrouter.com/en/main">React Router Dom</a>
+  - <a target="_blank" href="https://fkhadra.github.io/react-toastify/introduction">React Toastify</a>
+  - <a target="_blank" href="https://firebase.google.com">Firebase</a>
+  - <a target="_blank" href="https://formik.org/">Formik</a>
+  - <a target="_blank" href="https://github.com/jquense/yup">Yup</a>
+  - <a target="_blank" href="https://vitejs.dev/">Vite</a>
+  - <a target="_blank" href="https://tailwindcss.com/">Tailwindcss</a>
 
 ## <a name="contact"></a>Contact
 You can reach me at agustingomezdev@gmail.com or <a href="https://www.linkedin.com/in/agustingomezdev/">LinekdIn</a>.
